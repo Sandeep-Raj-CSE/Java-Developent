@@ -15,6 +15,10 @@ public class JavaweekprojectApplication implements CommandLineRunner {
 	apple obj; // but we get the error we can't define the static keyboard
 	// so basically we need to implement command line linterface
 
+
+	@Autowired
+	DBservices dbs;
+
 	public static void main(String[] args) {
 		SpringApplication.run(JavaweekprojectApplication.class, args);
 
@@ -27,6 +31,7 @@ public class JavaweekprojectApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		obj.eatapplye();
+		//obj.eatapplye();
+		System.out.println(dbs.getData());
 	}
 }
